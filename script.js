@@ -34,9 +34,13 @@ function updateDisplay(rialValue, tomanValue) {
 function formatNumberPersian(num) {
     const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
     
-    return num.toString().replace(/\d/g, function(digit) {
+    // First, format the number with commas
+    const numWithCommas = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    
+    // Then, replace digits with Persian digits
+    return numWithCommas.replace(/\d/g, function(digit) {
         return persianDigits[digit];
-    }).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    });
 }
 
 // Function to update date and time
