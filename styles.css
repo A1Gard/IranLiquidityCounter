@@ -13,9 +13,9 @@ body {
     font-family: 'Vazir', Tahoma, Arial, sans-serif;
     background-color: #ffffff;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Ensure consistent box model */
 }
 
 /* Title container for vertical centering */
@@ -32,13 +32,13 @@ body {
 }
 
 .header {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjust font size as needed */
     font-weight: bold;
-    color: #3498db; /* Changed from #000 to blue (#3498db) */
+    color: #333; /* Adjust color for better visibility */
     margin-bottom: 30px;
     text-align: center;
-    /* Remove this line as it's causing positioning issues */
-    /* margin-top: auto; */
+    margin-top: 20px; /* Add spacing from the top */
+    font-family: 'Vazir', sans-serif; /* Use the imported font */
 }
 
 .display1 {
