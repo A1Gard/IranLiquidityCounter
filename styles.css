@@ -102,9 +102,16 @@ body {
     margin-bottom: 20px;
     padding-right: 0;
     position: relative;
-    text-align: right;
+    text-align: right !important; /* Add !important to override any other styles */
+    direction: rtl !important;    /* Add !important to override any other styles */
+    display: block;
+    width: 100%;
+    float: right;                /* Add this to force right alignment */
+    clear: both;                 /* Add this to ensure proper positioning */
 }
 
+/* Remove these pseudo-elements if they're causing issues */
+/*
 .quote-title::before {
     content: "«";
     margin-left: 5px;
@@ -116,6 +123,7 @@ body {
     margin-right: 5px;
     color: #e74c3c;
 }
+*/
 
 .quote-text {
     font-size: 1.1rem;
@@ -137,6 +145,8 @@ body {
     font-style: italic;
 }
 
+/* DELETE THESE DUPLICATE RULES (lines 110-130) */
+/* 
 .quote-text {
     font-size: 1.1rem;
     line-height: 2;
@@ -154,6 +164,7 @@ body {
     padding-top: 15px;
     margin-top: 15px;
 }
+*/
 
 /* Disclaimer Styles */
 .disclaimer {
