@@ -212,6 +212,7 @@ body {
     padding: 20px 0;
 }
 
+/* Remove these duplicate media query sections */
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     body { padding: 10px; }
@@ -239,7 +240,7 @@ body {
     .quote-title { font-size: 1rem; }
 }
 
-/* Improve the main display container responsiveness */
+/* Keep only this main display container definition */
 .main-display-container {
     margin: 10vh auto;
     padding: 20px;
@@ -247,7 +248,7 @@ body {
     max-width: 800px;
 }
 
-/* Enhance responsive styles */
+/* And keep only these consolidated media queries */
 @media screen and (max-width: 768px) {
     body { 
         padding: 10px; 
@@ -294,10 +295,10 @@ body {
         margin: 20px 10px; 
     }
     .quote-text { 
-        font-size: 1rem; 
+        font-size: 0.9rem;  /* Changed to be smaller */
     }
     .quote-title { 
-        font-size: 1.1rem; 
+        font-size: 1rem;  /* Changed to be smaller */
     }
     .main-display-container {
         margin: 5vh auto;
@@ -327,11 +328,11 @@ body {
         padding: 3px 2px; 
     }
     .quote-text { 
-        font-size: 0.85rem; 
+        font-size: 0.8rem;  /* Made even smaller */
         line-height: 1.7;
     }
     .quote-title { 
-        font-size: 0.95rem; 
+        font-size: 0.9rem;  /* Made even smaller */
     }
     .quote-box {
         padding: 15px;
