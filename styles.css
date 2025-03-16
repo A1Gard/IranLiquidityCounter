@@ -1,13 +1,15 @@
 /* Embed Vazir Font (No External Files Needed) */
 @font-face {
     font-family: 'Vazir';
-    font-style: normal;
+    src: url('fonts/Vazir.woff2') format('woff2');
     font-weight: normal;
-    src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
 }
 
+/* Make sure Vazir is applied to body */
 body {
-    font-family: 'Vazir', Arial, sans-serif;
+    font-family: 'Vazir', Tahoma, Arial, sans-serif;
     background-color: #ffffff;
     text-align: center;
     padding: 20px;
