@@ -104,78 +104,7 @@
         این سامانه ممکن است در آینده به‌روزرسانی شده و تغییراتی در نحوه پردازش داده‌ها، مدل‌های محاسباتی و روش‌های تخمین نرخ رشد ایجاد شود. استفاده از این سامانه به منزله پذیرش تمامی این شرایط و آگاهی از ماهیت تخمینی اطلاعات ارائه‌شده تلقی می‌شود.
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initial values (starting from the displayed values)
-            let rialValue = 99490375932976940;
-            
-            // Growth rate (approximately 30% annual growth, converted to per second)
-            // 30% annual = 0.0000000082% per second (roughly)
-            const growthRatePerSecond = 0.000000082;
-            
-            // Function to convert English numbers to Persian
-            function toPersianNum(num) {
-                const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-                return num.toString().replace(/[0-9]/g, function(w) {
-                    return persianDigits[+w];
-                });
-            }
-            
-            // Format number with commas
-            function formatNumber(num) {
-                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            }
-            
-            // Update counters
-            function updateCounters() {
-                // Calculate growth
-                const rialGrowth = rialValue * growthRatePerSecond;
-                rialValue += rialGrowth;
-                
-                // Calculate toman value (1 toman = 10 rials)
-                // For display in "هزار میلیارد تومان" format, divide by 10^13
-                const tomanValue = rialValue / 10000000000000;
-                
-                // Update DOM with Persian numbers
-                document.getElementById('rialDisplay').textContent = toPersianNum(formatNumber(Math.floor(rialValue)));
-                
-                // Format toman display as a 4-digit number with comma separator 3 digits from right
-                let tomanFormatted = Math.floor(tomanValue).toString();
-                // Ensure we have exactly 4 digits
-                if (tomanFormatted.length > 4) {
-                    tomanFormatted = tomanFormatted.slice(0, 4);
-                } else if (tomanFormatted.length < 4) {
-                    tomanFormatted = tomanFormatted.padStart(4, '0');
-                }
-                // Insert comma after first digit
-                const formattedToman = tomanFormatted.slice(0, 1) + ',' + tomanFormatted.slice(1);
-                document.getElementById('tomanDisplay').textContent = toPersianNum(formattedToman);
-            }
-            
-function updatePersianDateTime() {
-    const now = new Date();
-    const optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Tehran' };
-    const time = new Intl.DateTimeFormat('fa-IR', optionsTime).format(now);
-    const optionsDate = { year: 'numeric', month: '2-digit', day: '2-digit', calendar: 'persian' };
-    const date = new Intl.DateTimeFormat('fa-IR', optionsDate).format(now);
-    document.getElementById('persianClock').textContent = time;
-    document.getElementById('persianDate').textContent = date;
-}
-
-
-
-
-            // Update every 100ms for smoother animation
-            setInterval(updateCounters, 100);
-            
-            // Update date and time every second
-            setInterval(updatePersianDateTime, 1000);
-            
-            // Initial updates
-            updateCounters();
-            updatePersianDateTime();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 </div>
