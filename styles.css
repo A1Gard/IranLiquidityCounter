@@ -29,11 +29,7 @@ body {
     color: #000;
     margin-bottom: 30px;
     text-align: center;
-    /* Center the header */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: auto; /* Push the header to the center of the page */
 }
 
 .display1 {
