@@ -9,6 +9,7 @@
     font-display: swap;
 }
 
+/* Near the top of the file, update the body styling */
 body {
     font-family: 'Vazir', Tahoma, Arial, sans-serif;
     background-color: #ffffff;
@@ -16,6 +17,9 @@ body {
     padding: 20px;
     margin: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header and Display Styles */
@@ -359,7 +363,6 @@ body {
     }
 }
 
-/* Add this for very small screens */
 @media screen and (max-width: 320px) {
     .display1 {
         font-size: 0.9rem;
@@ -370,10 +373,4 @@ body {
     .historical-table {
         font-size: 0.7rem;
     }
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
