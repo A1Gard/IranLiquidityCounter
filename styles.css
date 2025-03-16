@@ -10,8 +10,9 @@
 }
 
 /* Make sure Vazir is applied to body */
+/* Remove the old @font-face declaration and update body font-family */
 body {
-    font-family: 'Vazir', Tahoma, Arial, sans-serif !important;
+    font-family: 'Vazir', Tahoma, Arial, sans-serif;
     background-color: #ffffff;
     text-align: center;
     padding: 20px;
