@@ -151,3 +151,13 @@ body {
 .historical-table-container {
     -webkit-overflow-scrolling: touch;
 }
+
+.dedication {
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    font-style: italic;
+    padding: 20px 0;
+}
