@@ -10,6 +10,11 @@ function calculateLiquidity() {
     const currentLiquidity = DEFAULT_BASE_LIQUIDITY * Math.pow(DEFAULT_GROWTH_RATE, secondsElapsed);
     const thousandBillionTomans = currentLiquidity / 10000000000000;
     
+    console.log('Current Timestamp:', currentTimestamp);
+    console.log('Seconds Elapsed:', secondsElapsed);
+    console.log('Current Liquidity:', currentLiquidity);
+    console.log('Thousand Billion Tomans:', thousandBillionTomans);
+    
     updateDisplay(currentLiquidity, thousandBillionTomans);
 }
 
@@ -18,10 +23,19 @@ function updateDisplay(rialValue, tomanValue) {
     const rialFormatted = formatNumberPersian(Math.round(rialValue));
     const tomanFormatted = formatNumberPersian(Math.round(tomanValue));
     
-    document.getElementById('rialDisplay').textContent = rialFormatted;
-    document.getElementById('tomanDisplay').textContent = tomanFormatted;
+    // Add comma separators to the formatted numbers
+    const rialWithCommas = addCommaSeparator(rialFormatted);
+    const tomanWithCommas = addCommaSeparator(tomanFormatted);
+    
+    document.getElementById('rialDisplay').textContent = rialWithCommas;
+    document.getElementById('tomanDisplay').textContent = tomanWithCommas;
     
     updateDateTime();
+}
+
+// Function to add comma separators to numbers
+function addCommaSeparator(num) {
+    return num.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 // Function to convert numbers to Persian format
