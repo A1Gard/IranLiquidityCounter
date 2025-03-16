@@ -13,14 +13,22 @@ body {
     font-family: 'Vazir', Tahoma, Arial, sans-serif;
     background-color: #ffffff;
     text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center;
-    min-height: 100vh;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+/* Title container for vertical centering */
+.title-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content container for all other elements */
+.content-container {
+    padding: 20px;
 }
 
 .header {
