@@ -94,44 +94,24 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.quote-box:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
 .quote-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;  /* Reduced from 1.3rem */
     font-weight: bold;
     color: #e74c3c;
     margin-bottom: 20px;
     padding-right: 0;
     position: relative;
-    text-align: right !important; /* Add !important to override any other styles */
-    direction: rtl !important;    /* Add !important to override any other styles */
+    text-align: right !important;
+    direction: rtl !important;
     display: block;
     width: 100%;
-    float: right;                /* Add this to force right alignment */
-    clear: both;                 /* Add this to ensure proper positioning */
+    float: right;
+    clear: both;
 }
-
-/* Remove these pseudo-elements if they're causing issues */
-/*
-.quote-title::before {
-    content: "«";
-    margin-left: 5px;
-    color: #e74c3c;
-}
-
-.quote-title::after {
-    content: "»";
-    margin-right: 5px;
-    color: #e74c3c;
-}
-*/
 
 .quote-text {
-    font-size: 1.1rem;
-    line-height: 1.9;
+    font-size: 0.95rem;  /* Reduced from 1.1rem */
+    line-height: 1.8;    /* Slightly reduced line height */
     text-align: justify;
     color: #34495e;
     margin-bottom: 20px;
@@ -140,7 +120,7 @@ body {
 }
 
 .quote-source {
-    font-size: 0.9rem;
+    font-size: 0.85rem;  /* Slightly reduced from 0.9rem */
     color: #7f8c8d;
     text-align: left;
     border-top: 1px solid #eee;
