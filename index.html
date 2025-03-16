@@ -9,31 +9,170 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Title section centered vertically -->
-    <div class="title-section">
-        <div class="header">رقم نقدینگی کل کشور</div>
-    </div>
+    <!-- Added space at the top -->
+    <div style="height: 100px;"></div>
     
-    <!-- Content section with everything else -->
-    <div class="content-section">
-        <!-- Main display centered vertically -->
-        <div class="main-display-container">
-            <div class="display1" id="rialDisplay" style="overflow-wrap: break-word; word-wrap: break-word; max-width: 100%;">۹۹,۴۹۰,۳۷۵,۹۳۲,۹۷۶,۹۴۰</div>
-            <div class="currency">ریال</div>
-            <br><br>
-            <div class="display2" id="tomanDisplay">۹,۹۴۹</div>
-            <div class="unit">هزار میلیارد تومان</div>
-            <div class="status">در حال افزایش</div>
+    <div class="header">رقم نقدینگی کل کشور</div>
+    <div class="display1" id="rialDisplay">۹۹,۴۹۰,۳۷۵,۹۳۲,۹۷۶,۹۴۰</div>
+    <div class="currency">ریال</div>
+    <!-- Extra Space (3 Lines) -->
+    <br><br><br>
+    <div class="display2" id="tomanDisplay">۹,۹۴۹</div>
+    <div class="unit">هزار میلیارد تومان</div>
+    <div class="status">در حال افزایش</div>
+<br>
+    <div class="date-time" id="persianClock">۱۵:۲۱:۳۸</div>
+    <div class="date-time" id="persianDate">۱۴۰۳/۰۱/۰۱</div>
+
+    <!-- Historical Data Table -->
+    <div class="historical-table-container">
+        <table class="historical-table">
+            <thead>
+                <tr>
+                    <th>سال</th>
+                    <th>نقدینگی (ریال)</th>
+                    <th>متوسط نرخ رسمی دلار</th>
+                    <th>معادل دلاری نقدینگی در ایران</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>۱۳۹۷</td>
+                    <td>۱۸,۸۲۸,۹۰۰,۰۰۰,۰۰۰,۰۰۰</td>
+                    <td>۶۱,۹۰۳</td>
+                    <td>۳۰۴,۱۶۳,۸۹۷,۳۹۰</td>
+                </tr>
+                <tr>
+                    <td>۱۳۹۸</td>
+                    <td>۲۴,۷۲۱,۵۰۰,۰۰۰,۰۰۰,۰۰۰</td>
+                    <td>۸۲,۰۶۶</td>
+                    <td>۳۰۱,۲۴۳,۶۷۸,۲۵۴</td>
+                </tr>
+                <tr>
+                    <td>۱۳۹۹</td>
+                    <td>۳۴,۷۶۱,۷۰۰,۰۰۰,۰۰۰,۰۰۰</td>
+                    <td>۱۵۵,۸۸۲</td>
+                    <td>۲۲۳,۰۰۰,۰۸۸,۲۱۳</td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۰</td>
+                    <td>۴۸,۲۲۴,۴۰۰,۰۰۰,۰۰۰,۰۰۰</td>
+                    <td>۱۷۴,۱۶۸</td>
+                    <td>۲۷۷,۴۹۰,۴۱۰,۴۵۵</td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۱</td>
+                    <td>۶۳,۳۷۶,۸۰۰,۰۰۰,۰۰۰,۰۰۰</td>
+                    <td>۲۶۶,۶۰۳</td>
+                    <td>۲۳۹,۵۱۵,۶۵۲,۸۸۰</td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۲</td>
+                    <td>۷۸,۷۷۴,۵۰۰,۰۰۰,۰۰۰,۰۰۰</td>
+                    <td>۳۵۲,۵۱۰</td>
+                    <td>۲۲۳,۴۶۵,۲۸۰,۴۷۲</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  <!-- Close historical-table-container -->
+
+    <div class="quote-box">
+        <div class="quote-title">پول ملی باید تقویت بشود، این در آبروی کشور اثر دارد.</div>
+        <div class="quote-text">
+            یکی از موضوعات مهم مربوط به اقتصاد، اصلاح نظام ارزی کشور است. در درجه اول، تقویت پول ملی است. دیگر حالا سیاست، برنامه‌اش کیفیت کارا و متخصصین باید انتخاب کنند. پول ملی باید تقویت بشود! این، هم در واقعیت زندگی مردم اثر دارد، هم در آرزوی کشور اثر دارد.
         </div>
-
-        <div class="date-time" id="persianClock">۱۵:۲۱:۳۸</div>
-        <div class="date-time" id="persianDate">۱۴۰۳/۰۱/۰۱</div>
-
-        <!-- Rest of your content (historical table, quote box, etc.) -->
+        <div class="quote-source">
+            شنبه ۱۸ اسفند ۱۴۰۳
+            <br>
+            بیانات رهبر انقلاب در دیدار مسئولان نظام
+        </div>
+    </div>
+ 
+    <div class="separator"></div>
+    <div class="disclaimer">
+        <div class="disclaimer-title">سامانه نظارت بر میزان نقدینگی کل کشور - نسخه آزمایشی</div>
+        این سامانه یک نسخه آزمایشی از سیستم نظارت بر نقدینگی کل کشور است که به منظور نمایش تخمینی از وضعیت نقدینگی طراحی شده است. تمامی اعداد و ارقامی که در این صفحه نمایش داده می‌شوند، بر اساس آخرین داده‌های رسمی منتشرشده توسط مراجع مربوطه هستند و با استفاده از مدل‌های تخمینی و فرمول‌های رشد تاریخی، در زمان واقعی به‌روز می‌شوند. با این حال، باید توجه داشت که این مقادیر صرفاً جنبه اطلاع‌رسانی داشته و ممکن است با ارقام رسمی آینده که توسط بانک مرکزی یا سایر نهادهای اقتصادی منتشر می‌شوند، تفاوت داشته باشند.
+        <br><br>
+        این سامانه ضمن قدردانی از پرسنل خدوم بانک مرکزی، شبکه بانکی کشور، سازمان برنامه و بودجه، مسئولان قوه مجریه و نمایندگان گرامی مجلس شورای اسلامی(قوه مقننه) که با تلاش‌های بی‌وقفه خود در مسیر خلق نقدینگی و مدیریت اقتصادی کشور گام برمی‌دارند، امیدوار است که این ابزار بتواند تصویری شفاف‌تر از وضعیت نقدینگی ارائه داده و به ارتقای آگاهی عمومی در حوزه سیاست‌های پولی و مالی کمک کند.
+        <br><br>
+        این سامانه هیچ‌گونه تضمینی نسبت به دقت، صحت، یا کامل بودن داده‌های نمایش‌داده‌شده ارائه نمی‌دهد و استفاده از اطلاعات آن به عهده کاربران است. این ارقام ممکن است بر اساس روش‌های محاسباتی، فرضیات مدل‌سازی و نرخ‌های رشد تخمینی تغییر کنند و نمی‌توان آنها را به عنوان داده‌های قطعی یا رسمی در نظر گرفت. همچنین، نرخ رشد نقدینگی که در محاسبات این سامانه مورد استفاده قرار می‌گیرد، یک مقدار تخمینی است که بر اساس روندهای گذشته تعیین شده و نمی‌تواند پیش‌بینی دقیقی از آینده ارائه دهد.
+        <br><br>
+        کاربران این سامانه باید توجه داشته باشند که تمامی مسئولیت‌های مربوط به استفاده از اطلاعات ارائه‌شده، بر عهده خود آنها بوده و این سامانه، توسعه‌دهندگان آن و هر نهاد مرتبط با آن هیچ‌گونه مسئولیتی در قبال تصمیمات اتخاذشده بر اساس این اطلاعات، خسارات احتمالی، یا نتایج ناشی از استفاده از این داده‌ها نخواهند داشت. توصیه می‌شود که پیش از هرگونه تصمیم‌گیری اقتصادی یا مالی، کاربران از منابع رسمی و مشاوران اقتصادی معتبر استفاده کرده و داده‌های جدید را بررسی کنند.
+        <br><br>
+        این سامانه ممکن است در آینده به‌روزرسانی شده و تغییراتی در نحوه پردازش داده‌ها، مدل‌های محاسباتی و روش‌های تخمین نرخ رشد ایجاد شود. استفاده از این سامانه به منزله پذیرش تمامی این شرایط و آگاهی از ماهیت تخمینی اطلاعات ارائه‌شده تلقی می‌شود.
     </div>
 
     <script>
-        // Your existing JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial values (starting from the displayed values)
+            let rialValue = 99490375932976940;
+            
+            // Growth rate (approximately 30% annual growth, converted to per second)
+            // 30% annual = 0.0000000082% per second (roughly)
+            const growthRatePerSecond = 0.000000082;
+            
+            // Function to convert English numbers to Persian
+            function toPersianNum(num) {
+                const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+                return num.toString().replace(/[0-9]/g, function(w) {
+                    return persianDigits[+w];
+                });
+            }
+            
+            // Format number with commas
+            function formatNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            
+            // Update counters
+            function updateCounters() {
+                // Calculate growth
+                const rialGrowth = rialValue * growthRatePerSecond;
+                rialValue += rialGrowth;
+                
+                // Calculate toman value (1 toman = 10 rials)
+                // For display in "هزار میلیارد تومان" format, divide by 10^13
+                const tomanValue = rialValue / 10000000000000;
+                
+                // Update DOM with Persian numbers
+                document.getElementById('rialDisplay').textContent = toPersianNum(formatNumber(Math.floor(rialValue)));
+                
+                // Format toman display as a 4-digit number with comma separator 3 digits from right
+                let tomanFormatted = Math.floor(tomanValue).toString();
+                // Ensure we have exactly 4 digits
+                if (tomanFormatted.length > 4) {
+                    tomanFormatted = tomanFormatted.slice(0, 4);
+                } else if (tomanFormatted.length < 4) {
+                    tomanFormatted = tomanFormatted.padStart(4, '0');
+                }
+                // Insert comma after first digit
+                const formattedToman = tomanFormatted.slice(0, 1) + ',' + tomanFormatted.slice(1);
+                document.getElementById('tomanDisplay').textContent = toPersianNum(formattedToman);
+            }
+            
+function updatePersianDateTime() {
+    const now = new Date();
+    const optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Tehran' };
+    const time = new Intl.DateTimeFormat('fa-IR', optionsTime).format(now);
+    const optionsDate = { year: 'numeric', month: '2-digit', day: '2-digit', calendar: 'persian' };
+    const date = new Intl.DateTimeFormat('fa-IR', optionsDate).format(now);
+    document.getElementById('persianClock').textContent = time;
+    document.getElementById('persianDate').textContent = date;
+}
+
+
+
+
+            // Update every 100ms for smoother animation
+            setInterval(updateCounters, 100);
+            
+            // Update date and time every second
+            setInterval(updatePersianDateTime, 1000);
+            
+            // Initial updates
+            updateCounters();
+            updatePersianDateTime();
+        });
     </script>
 </body>
 </html>

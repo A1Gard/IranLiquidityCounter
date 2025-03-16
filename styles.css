@@ -9,27 +9,13 @@
     font-display: swap;
 }
 
-/* Near the top of the file, update the body styling */
 body {
     font-family: 'Vazir', Tahoma, Arial, sans-serif;
     background-color: #ffffff;
     text-align: center;
-    padding: 0;
+    padding: 20px;
     margin: 0;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Add this to create a centered title section */
-.title-section {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 
 /* Header and Display Styles */
@@ -38,11 +24,6 @@ body {
     font-weight: bold;
     color: #000;
     margin-bottom: 30px;
-}
-
-/* Content section to hold everything else */
-.content-section {
-    padding: 20px;
 }
 
 .display1 {
@@ -109,24 +90,44 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.quote-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .quote-title {
-    font-size: 1.1rem;  /* Reduced from 1.3rem */
+    font-size: 1.3rem;
     font-weight: bold;
     color: #e74c3c;
     margin-bottom: 20px;
     padding-right: 0;
     position: relative;
-    text-align: right !important;
-    direction: rtl !important;
+    text-align: right !important; /* Add !important to override any other styles */
+    direction: rtl !important;    /* Add !important to override any other styles */
     display: block;
     width: 100%;
-    float: right;
-    clear: both;
+    float: right;                /* Add this to force right alignment */
+    clear: both;                 /* Add this to ensure proper positioning */
 }
 
+/* Remove these pseudo-elements if they're causing issues */
+/*
+.quote-title::before {
+    content: "«";
+    margin-left: 5px;
+    color: #e74c3c;
+}
+
+.quote-title::after {
+    content: "»";
+    margin-right: 5px;
+    color: #e74c3c;
+}
+*/
+
 .quote-text {
-    font-size: 0.95rem;  /* Reduced from 1.1rem */
-    line-height: 1.8;    /* Slightly reduced line height */
+    font-size: 1.1rem;
+    line-height: 1.9;
     text-align: justify;
     color: #34495e;
     margin-bottom: 20px;
@@ -135,7 +136,7 @@ body {
 }
 
 .quote-source {
-    font-size: 0.85rem;  /* Slightly reduced from 0.9rem */
+    font-size: 0.9rem;
     color: #7f8c8d;
     text-align: left;
     border-top: 1px solid #eee;
@@ -227,7 +228,6 @@ body {
     padding: 20px 0;
 }
 
-/* Remove these duplicate media query sections */
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     body { padding: 10px; }
@@ -253,120 +253,4 @@ body {
     .historical-table th, .historical-table td { padding: 4px 2px; }
     .quote-text { font-size: 0.9rem; }
     .quote-title { font-size: 1rem; }
-}
-
-/* Keep only this main display container definition */
-.main-display-container {
-    margin: 5vh auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 800px;
-}
-
-/* And keep only these consolidated media queries */
-@media screen and (max-width: 768px) {
-    body { 
-        padding: 10px; 
-        min-height: 100vh;
-    }
-    .header { 
-        font-size: 1.8rem; 
-        margin-bottom: 20px; 
-        padding: 0 10px;
-    }
-    .display1 { 
-        font-size: 1.6rem;
-        word-break: break-word;
-    }
-    .display2 { 
-        font-size: 1.6rem; 
-    }
-    .currency, .unit { 
-        font-size: 1.1rem; 
-    }
-    .date-time { 
-        font-size: 1rem; 
-    }
-    .historical-table-container { 
-        max-width: 100%; 
-        margin: 20px auto;
-        padding: 0 10px;
-    }
-    .historical-table { 
-        font-size: 0.9rem; 
-    }
-    .historical-table th, .historical-table td { 
-        padding: 6px 4px; 
-    }
-    .disclaimer { 
-        font-size: 0.8rem; 
-        padding: 0 15px; 
-    }
-    .disclaimer-title { 
-        font-size: 1rem; 
-    }
-    .quote-box { 
-        padding: 20px;
-        margin: 20px 10px; 
-    }
-    .quote-text { 
-        font-size: 0.9rem;  /* Changed to be smaller */
-    }
-    .quote-title { 
-        font-size: 1rem;  /* Changed to be smaller */
-    }
-    .main-display-container {
-        margin: 5vh auto;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .header { 
-        font-size: 1.4rem;
-        padding: 0 5px;
-    }
-    .display1 { 
-        font-size: 1.1rem;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-    }
-    .display2 { 
-        font-size: 1.2rem; 
-    }
-    .currency, .unit { 
-        font-size: 0.9rem; 
-    }
-    .historical-table { 
-        font-size: 0.75rem; 
-    }
-    .historical-table th, .historical-table td { 
-        padding: 3px 2px; 
-    }
-    .quote-text { 
-        font-size: 0.8rem;  /* Made even smaller */
-        line-height: 1.7;
-    }
-    .quote-title { 
-        font-size: 0.9rem;  /* Made even smaller */
-    }
-    .quote-box {
-        padding: 15px;
-        margin: 15px 5px;
-    }
-    .main-display-container {
-        margin: 3vh auto;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .display1 {
-        font-size: 0.9rem;
-    }
-    .display2 {
-        font-size: 1rem;
-    }
-    .historical-table {
-        font-size: 0.7rem;
-    }
 }
