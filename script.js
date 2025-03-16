@@ -36,11 +36,15 @@ function formatNumberPersian(num) {
     
     // First, format the number with commas
     const numWithCommas = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    console.log('Number with Commas:', numWithCommas);
     
     // Then, replace digits with Persian digits
-    return numWithCommas.replace(/\d/g, function(digit) {
+    const persianFormatted = numWithCommas.replace(/\d/g, function(digit) {
         return persianDigits[digit];
     });
+    console.log('Persian Formatted:', persianFormatted);
+    
+    return persianFormatted;
 }
 
 // Function to update date and time
