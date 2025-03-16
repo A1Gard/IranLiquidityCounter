@@ -86,7 +86,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    direction: rtl;  /* Add this */
+    direction: rtl;
+    text-align: right;  /* Add this */
 }
 
 .quote-title {
@@ -96,9 +97,8 @@ body {
     margin-bottom: 20px;
     border-right: 4px solid #e74c3c;
     padding-right: 15px;
+    display: inline-block;  /* Change to inline-block */
     text-align: right;
-    width: 100%;        /* Add this */
-    display: block;     /* Add this */
 }
 
 .quote-box:hover {
