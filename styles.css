@@ -37,8 +37,8 @@ body {
     color: #3498db; /* Changed from #000 to blue (#3498db) */
     margin-bottom: 30px;
     text-align: center;
-    /* Remove this line: */
-    margin-top: auto; /* Push the header to the center of the page */
+    /* Remove this line as it's causing positioning issues */
+    /* margin-top: auto; */
 }
 
 .display1 {
