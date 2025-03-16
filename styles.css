@@ -20,15 +20,17 @@ body {
 
 /* Title container for vertical centering */
 .title-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin-bottom: 10px; /* Reduce this from 20px */
+    padding-top: 0;
+    flex: 0 0 auto;
 }
 
 /* Content container for all other elements */
 .content-container {
-    padding: 20px;
+    padding: 10px; /* Reduce this from 20px */
+    margin-top: 0; /* Remove the margin that's pushing content down */
+    text-align: center;
 }
 
 .header {
