@@ -20,22 +20,14 @@ function calculateLiquidity() {
 
 // Function to update the display with formatted numbers
 function updateDisplay(rialValue, tomanValue) {
+    // Format numbers with Persian digits and commas
     const rialFormatted = formatNumberPersian(Math.round(rialValue));
     const tomanFormatted = formatNumberPersian(Math.round(tomanValue));
     
-    // Add comma separators to the formatted numbers
-    const rialWithCommas = addCommaSeparator(rialFormatted);
-    const tomanWithCommas = addCommaSeparator(tomanFormatted);
-    
-    document.getElementById('rialDisplay').textContent = rialWithCommas;
-    document.getElementById('tomanDisplay').textContent = tomanWithCommas;
+    document.getElementById('rialDisplay').textContent = rialFormatted;
+    document.getElementById('tomanDisplay').textContent = tomanFormatted;
     
     updateDateTime();
-}
-
-// Function to add comma separators to numbers
-function addCommaSeparator(num) {
-    return num.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 // Function to convert numbers to Persian format
