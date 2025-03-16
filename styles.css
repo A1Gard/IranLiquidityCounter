@@ -109,6 +109,8 @@ body {
     margin-bottom: 20px;
     border-right: 4px solid #e74c3c;
     padding-right: 15px;
+    text-align: right;  /* Add this line */
+    direction: rtl;     /* Add this line */
 }
 
 .quote-source {
