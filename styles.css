@@ -1,4 +1,4 @@
-/* Embed Vazir Font (No External Files Needed) */
+/* Embed Vazir Font */
 @font-face {
     font-family: 'Vazir';
     src: local('Vazir'),
@@ -9,8 +9,6 @@
     font-display: swap;
 }
 
-/* Make sure Vazir is applied to body */
-/* Remove the old @font-face declaration and update body font-family */
 body {
     font-family: 'Vazir', Tahoma, Arial, sans-serif;
     background-color: #ffffff;
@@ -79,6 +77,49 @@ body {
     margin: 15px auto;
 }
 
+/* Quote Card Styles */
+.quote-box {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quote-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    line-height: 2;
+    text-align: justify;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.quote-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    border-right: 4px solid #e74c3c;
+    padding-right: 15px;
+}
+
+.quote-source {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
 /* Disclaimer Styles */
 .disclaimer {
     font-size: 0.85rem;
@@ -100,6 +141,7 @@ body {
     margin: 30px auto;
     max-width: 800px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .historical-table {
@@ -130,6 +172,16 @@ body {
     background-color: #f1f1f1;
 }
 
+.dedication {
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    font-style: italic;
+    padding: 20px 0;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     body { padding: 10px; }
@@ -142,6 +194,9 @@ body {
     .historical-table th, .historical-table td { padding: 6px 4px; }
     .disclaimer { font-size: 0.8rem; padding: 0 10px; }
     .disclaimer-title { font-size: 1rem; }
+    .quote-box { padding: 20px; }
+    .quote-text { font-size: 1rem; }
+    .quote-title { font-size: 1.1rem; }
 }
 
 @media screen and (max-width: 480px) {
@@ -150,19 +205,6 @@ body {
     .currency, .unit { font-size: 1rem; }
     .historical-table { font-size: 0.8rem; }
     .historical-table th, .historical-table td { padding: 4px 2px; }
-}
-
-/* Fix table horizontal scroll on mobile */
-.historical-table-container {
-    -webkit-overflow-scrolling: touch;
-}
-
-.dedication {
-    font-size: 0.9rem;
-    color: #666;
-    max-width: 800px;
-    margin: 30px auto;
-    text-align: center;
-    font-style: italic;
-    padding: 20px 0;
+    .quote-text { font-size: 0.9rem; }
+    .quote-title { font-size: 1rem; }
 }
