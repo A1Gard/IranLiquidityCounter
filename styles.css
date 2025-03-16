@@ -254,3 +254,126 @@ body {
     .quote-text { font-size: 0.9rem; }
     .quote-title { font-size: 1rem; }
 }
+
+/* Improve the main display container responsiveness */
+.main-display-container {
+    margin: 10vh auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Enhance responsive styles */
+@media screen and (max-width: 768px) {
+    body { 
+        padding: 10px; 
+        min-height: 100vh;
+    }
+    .header { 
+        font-size: 1.8rem; 
+        margin-bottom: 20px; 
+        padding: 0 10px;
+    }
+    .display1 { 
+        font-size: 1.6rem;
+        word-break: break-word;
+    }
+    .display2 { 
+        font-size: 1.6rem; 
+    }
+    .currency, .unit { 
+        font-size: 1.1rem; 
+    }
+    .date-time { 
+        font-size: 1rem; 
+    }
+    .historical-table-container { 
+        max-width: 100%; 
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    .historical-table { 
+        font-size: 0.9rem; 
+    }
+    .historical-table th, .historical-table td { 
+        padding: 6px 4px; 
+    }
+    .disclaimer { 
+        font-size: 0.8rem; 
+        padding: 0 15px; 
+    }
+    .disclaimer-title { 
+        font-size: 1rem; 
+    }
+    .quote-box { 
+        padding: 20px;
+        margin: 20px 10px; 
+    }
+    .quote-text { 
+        font-size: 1rem; 
+    }
+    .quote-title { 
+        font-size: 1.1rem; 
+    }
+    .main-display-container {
+        margin: 5vh auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header { 
+        font-size: 1.4rem;
+        padding: 0 5px;
+    }
+    .display1 { 
+        font-size: 1.1rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    .display2 { 
+        font-size: 1.2rem; 
+    }
+    .currency, .unit { 
+        font-size: 0.9rem; 
+    }
+    .historical-table { 
+        font-size: 0.75rem; 
+    }
+    .historical-table th, .historical-table td { 
+        padding: 3px 2px; 
+    }
+    .quote-text { 
+        font-size: 0.85rem; 
+        line-height: 1.7;
+    }
+    .quote-title { 
+        font-size: 0.95rem; 
+    }
+    .quote-box {
+        padding: 15px;
+        margin: 15px 5px;
+    }
+    .main-display-container {
+        margin: 3vh auto;
+        padding: 10px;
+    }
+}
+
+/* Add this for very small screens */
+@media screen and (max-width: 320px) {
+    .display1 {
+        font-size: 0.9rem;
+    }
+    .display2 {
+        font-size: 1rem;
+    }
+    .historical-table {
+        font-size: 0.7rem;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

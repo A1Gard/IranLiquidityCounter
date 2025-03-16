@@ -9,21 +9,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Added space at the top -->
-    <div style="height: 100px;"></div>
+    <!-- Added significant space at the top to push content down -->
+    <div style="height: 25vh;"></div>
     
     <div class="header">رقم نقدینگی کل کشور</div>
-    <div class="display1" id="rialDisplay">۹۹,۴۹۰,۳۷۵,۹۳۲,۹۷۶,۹۴۰</div>
-    <div class="currency">ریال</div>
-    <!-- Extra Space (3 Lines) -->
-    <br><br><br>
-    <div class="display2" id="tomanDisplay">۹,۹۴۹</div>
-    <div class="unit">هزار میلیارد تومان</div>
-    <div class="status">در حال افزایش</div>
-<br>
+    
+    <!-- Main display centered vertically -->
+    <div class="main-display-container">
+        <!-- In your HTML, modify the display1 div to handle long numbers better -->
+        <div class="display1" id="rialDisplay" style="overflow-wrap: break-word; word-wrap: break-word; max-width: 100%;">۹۹,۴۹۰,۳۷۵,۹۳۲,۹۷۶,۹۴۰</div>
+        <div class="currency">ریال</div>
+        <br><br>
+        <div class="display2" id="tomanDisplay">۹,۹۴۹</div>
+        <div class="unit">هزار میلیارد تومان</div>
+        <div class="status">در حال افزایش</div>
+    </div>
+
     <div class="date-time" id="persianClock">۱۵:۲۱:۳۸</div>
     <div class="date-time" id="persianDate">۱۴۰۳/۰۱/۰۱</div>
 
+    <!-- Rest of the content remains the same -->
     <!-- Historical Data Table -->
     <div class="historical-table-container">
         <table class="historical-table">
@@ -38,7 +43,7 @@
             <tbody>
                 <tr>
                     <td>۱۳۹۷</td>
-                    <td>۱۸,۸۲۸,۹۰۰,۰۰۰,۰۰۰,۰۰۰</td>
+                    <td>۱۸,۲۲۸,۹۰۰,۰۰۰,۰۰۰,۰۰۰</td>
                     <td>۶۱,۹۰۳</td>
                     <td>۳۰۴,۱۶۳,۸۹۷,۳۹۰</td>
                 </tr>
