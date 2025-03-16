@@ -14,13 +14,13 @@ body {
     background-color: #ffffff;
     text-align: center;
     margin: 0;
-    padding: 300px 0 0 0; /* Add top padding */
+    padding: 40vh 0 0 0; /* Add top padding */
     box-sizing: border-box;
 }
 
 /* Title container for vertical centering */
 .title-container {
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
