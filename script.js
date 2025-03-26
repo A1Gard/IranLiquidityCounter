@@ -21,10 +21,10 @@ function calculateLiquidity() {
 // Function to update the display with formatted numbers
 function updateDisplay(rialValue, tomanValue) {
     // Format numbers with Persian digits and commas
-    const rialFormatted = formatNumberPretty(formatNumberPersian(Math.round(rialValue)));
+    const rialFormatted = formatNumberPersian(Math.round(rialValue));
     const tomanFormatted = formatNumberPersian(Math.round(tomanValue));
     
-    document.getElementById('rialDisplay').innerHTML = rialFormatted;
+    document.getElementById('rialDisplay').textContent = rialFormatted;
     document.getElementById('tomanDisplay').textContent = tomanFormatted;
     
     updateDateTime();
@@ -39,12 +39,12 @@ function formatNumberPersian(num) {
     console.log('Number with Commas:', numWithCommas);
     
     // Then, replace digits with Persian digits
-    // const persianFormatted = numWithCommas.replace(/\d/g, function(digit) {
-    //     return persianDigits[digit];
-    // });
-    // console.log('Persian Formatted:', persianFormatted);
+    const persianFormatted = numWithCommas.replace(/\d/g, function(digit) {
+        return persianDigits[digit];
+    });
+    console.log('Persian Formatted:', persianFormatted);
     
-    return numWithCommas;
+    return persianFormatted;
 }
 
 // Function to update date and time
@@ -73,8 +73,3 @@ document.addEventListener('DOMContentLoaded', function() {
     calculateLiquidity();
     setInterval(calculateLiquidity, 1000);
 });
-
-function formatNumberPretty(number) {
-    let result =   '<span>' + number.toString().split('').join('</span><span>') + '</span>';
-    return result.split('<span>,</span>').join('<span class="split">,</span>');
-}
