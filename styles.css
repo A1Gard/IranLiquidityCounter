@@ -1,6 +1,7 @@
 
 *{
     font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+    font-feature-settings: "ss01";
 }
 
 body {
