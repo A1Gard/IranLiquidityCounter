@@ -1,13 +1,8 @@
-/* Embed Vazir Font */
-/* @font-face {
-    font-family: 'Vazir';
-    src: local('Vazir'),
-         url('fonts/Vazir.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-} */
+
+*{
+    font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+    font-feature-settings: "ss01";
+}
 
 body {
     font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
@@ -16,6 +11,11 @@ body {
     margin: 0;
     padding: 30vh 0 0 0; /* Add top padding */
     box-sizing: border-box;
+    font-feature-settings: "ss01";
+}
+
+p{
+    line-height: 2em;
 }
 
 /* Title container for vertical centering */
@@ -46,6 +46,29 @@ body {
     color: #e74c3c;
     margin-bottom: 10px;
     font-weight: bold;
+}
+
+.display1{
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.display1 span {
+    display: block;
+    padding: 5px 0;
+    background: #eeeeee;
+    border-radius: 7px;
+    margin-right: .2em;
+    text-align: center;
+    flex:1;
+}
+
+.display1 span.split {
+    background: transparent;
+    flex-grow: .1;
 }
 
 .display2 {
@@ -244,11 +267,17 @@ body {
     padding: 20px 0;
 }
 
+
+@media screen and (max-width: 968px) {
+    .display1, .display2 { font-size: 2rem; }
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     body { padding: 10px; }
     .header { font-size: 1.8rem; margin-bottom: 20px; }
     .display1, .display2 { font-size: 1.6rem; }
+    .display1 span{padding: 0 ; }
     .currency, .unit { font-size: 1.1rem; }
     .date-time { font-size: 1rem; }
     .historical-table-container { max-width: 100%; margin: 20px auto; }
@@ -270,3 +299,49 @@ body {
     .quote-text { font-size: 0.9rem; }
     .quote-title { font-size: 1rem; }
 }
+
+/*+1700px width*/
+@media ( min-width: 1700px ) {
+    .display1{
+        max-width: 1500px;
+    }
+}
+.splitter{
+    margin: 35px auto;
+}
+
+
+.github-corner {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    border-bottom: 0;
+    text-decoration: none;
+
+    svg {
+        height: 70px;
+        width: 70px;
+        fill: #e74c3c;
+        color: #ffffff;
+    }
+
+    &:hover {
+        .octo-arm {
+            animation: octocat-wave 560ms ease-in-out;
+        }
+    }
+}
+
+@keyframes octocat-wave {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    20%, 60% {
+        transform: rotate(-25deg);
+    }
+    40%, 80% {
+        transform: rotate(10deg);
+    }
+}
+
