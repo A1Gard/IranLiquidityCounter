@@ -1,7 +1,6 @@
 
 *{
     font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
-    font-feature-settings: "ss01";
 }
 
 body {
@@ -11,7 +10,7 @@ body {
     margin: 0;
     padding: 30vh 0 0 0; /* Add top padding */
     box-sizing: border-box;
-    font-feature-settings: "ss01";
+    font-feature-settings: "ss01" !important;
 }
 
 p{
@@ -38,7 +37,7 @@ p{
     margin-bottom: 30px;
     text-align: center;
     margin-top: 20px; /* Add spacing from the top */
-    font-family: 'Vazir', sans-serif; /* Use the imported font */
+    font-family: 'Vazirmatn', sans-serif; /* Use the imported font */
 }
 
 .display1 {
@@ -46,30 +45,32 @@ p{
     color: #e74c3c;
     margin-bottom: 10px;
     font-weight: bold;
-}
-
-.display1{
-    max-width: 100%;
-    margin-right: auto;
     margin-left: auto;
-    display: flex;
-    flex-direction: row;
+    margin-right: auto;
 }
 
-.display1 span {
-    display: block;
-    padding: 5px 0;
-    background: #eeeeee;
-    border-radius: 7px;
-    margin-right: .2em;
-    text-align: center;
-    flex:1;
-}
+/*.display1{*/
+/*    max-width: 100%;*/
+/*    margin-right: auto;*/
+/*    margin-left: auto;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
 
-.display1 span.split {
-    background: transparent;
-    flex-grow: .1;
-}
+/*.display1 span {*/
+/*    display: block;*/
+/*    padding: 5px 0;*/
+/*    background: #eeeeee;*/
+/*    border-radius: 7px;*/
+/*    margin-right: .2em;*/
+/*    text-align: center;*/
+/*    flex:1;*/
+/*}*/
+
+/*.display1 span.split {*/
+/*    background: transparent;*/
+/*    flex-grow: .1;*/
+/*}*/
 
 .display2 {
     font-size: 2.2rem;
@@ -235,6 +236,7 @@ p{
     font-size: 1rem;
     direction: rtl;
     min-width: 600px;
+
 }
 
 .historical-table th, 
